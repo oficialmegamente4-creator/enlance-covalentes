@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Química - Carlos Hernando Duburque</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <img src="imagenes/_logocasd.png" alt="Logo CASD" class="logo-img">
+        <div class="header-info">
+            <h1>Química Mauricio</h1>
+            <p>Estudiante: Carlos Hernando Duburque Cardona - 10B</p>
+        </div>
+        <img src="imagenes/logo_carlitos.png" alt="Logo Carlitos" class="logo-img">
+    </header>
+
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('repaso',)">Enlaces Simples, Dobles y Triples</button>
+            <button class="tab-btn" onclick="openTab('laboratorio',)">Actividad (Aprendizaje)</button>
+            <button class="tab-btn" onclick="openTab('simulacro1', )">Simulacro Pruebas(10 Preguntas)</button>
+            <button class="tab-btn" onclick="openTab('simulacro2',); loadQuiz2();">Prueba ICFES(10 Preguntas)</button>
+        </div>
+
+        <div id="repaso" class="tab-content active">
+            <div class="section">
+                <h2>🔗 Enlaces Simples, Dobles y Triples: Clasificación por Orden de Enlace</h2>
+                <div class="theoretical-grid">
+                    <div>
+                        <p>El <b>orden de enlace</b> indica la cantidad de pares de electrones que comparten dos átomos
+                            en un enlace covalente. Esto determina la <b>longitud, energía y estabilidad del enlace</b>.
+                            Mientras mayor sea el orden del enlace, más fuerte es la atracción entre los átomos.</p>
+
+                        <h3>1. Enlace Simple (σ - sigma)</h3>
+                        <ul class="feature-list">
+                            <li><b>Definición:</b> Se forma cuando dos átomos comparten UN par de electrones (2 e⁻). Los
+                                electrones se distribuyen entre los dos núcleos de forma lineal.</li>
+                            <li><b>Características:</b> Es el más débil de los tres, con mayor longitud de enlace y
+                                menor energía de disociación.</li>
+                            <li><b>Ejemplos:</b> H₂ (enlace H-H), Cl₂ (enlace Cl-Cl), H-Cl (enlace H-Cl), C-C en
+                                alcanos.</li>
+                            <li><b>Simbología:</b> Se representa con una línea recta: C-C</li>
+                        </ul>
+
+                        <h3>2. Enlace Doble (σ + π - sigma y pi)</h3>
+                        <ul class="feature-list">
+                            <li><b>Definición:</b> Se forma cuando dos átomos comparten DOS pares de electrones (4 e⁻).
+                                Uno de los pares forma un enlace σ (sigma) y el otro forma un enlace π (pi).</li>
+                            <li><b>Características:</b> Mayor fortaleza que el simple, menor longitud de enlace, mayor
+                                energía de disociación. Restringe la rotación.</li>
+                            <li><b>Ejemplos:</b> O₂ (O=O), CO₂ (O=C=O), CH₂=CH₂ (Etileno), C=C en alquenos.</li>
+                            <li><b>Simbología:</b> Se representa con dos líneas: C=C</li>
+                        </ul>
+
+                        <h3>3. Enlace Triple (σ + π + π - sigma y dos pi)</h3>
+                        <ul class="feature-list">
+                            <li><b>Definición:</b> Se forma cuando dos átomos comparten TRES pares de electrones (6 e⁻).
+                                Uno es enlace σ (sigma) y dos son enlaces π (pi).</li>
+                            <li><b>Características:</b> El más fuerte de los tres, con menor longitud de enlace y máxima
+                                energía de disociación. Impide completamente la rotación.</li>
+                            <li><b>Ejemplos:</b> N₂ (N≡N), HC≡CH (Acetileno), C≡C en alquinos.</li>
+                            <li><b>Simbología:</b> Se representa con tres líneas: C≡C</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div
+                            style="background: #fff; padding: 15px; border-radius: 12px; color: #000; text-align: center;">
+                            <p><b>Comparación Visual</b></p>
+                            <div
+                                style="background: #eee; height: 200px; display: flex; align-items: center; justify-content: center; margin: 10px 0; border-radius: 8px;">
+                                <img src="imagenes/tipos-de-enlaces-covalentes-lifeder-min.png"
+                                    alt="Comparación de enlaces"
+                                    style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                            </div>
+                            <p style="font-size: 0.8rem;"><i>Enlaces Simple (C-C), Doble (C=C) y Triple (C≡C)</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📊 Comparación de Propiedades de Enlaces</h2>
+                <table style="width: 100%; border-collapse: collapse; color: #c9d1d9;">
+                    <thead>
+                        <tr style="background: #21262d; border-bottom: 2px solid #58a6ff;">
+                            <th style="padding: 12px; text-align: left; border: 1px solid #30363d;">Propiedad</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #30363d;">Enlace Simple</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #30363d;">Enlace Doble</th>
+                            <th style="padding: 12px; text-align: left; border: 1px solid #30363d;">Enlace Triple</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #30363d;">
+                            <td style="padding: 12px; border: 1px solid #30363d;"><b>Pares de Electrones</b></td>
+                            <td style="padding: 12px; border: 1px solid #30363d;">1 par (2 e⁻)</td>
+                            <td style="padding: 12px; border: 1px solid #30363d;">2 pares (4 e⁻)</td>
+                            <td style="padding: 12px; border: 1px solid #30363d;">3 pares (6 e⁻)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #30363d;">
+                            <td style="padding: 12px; border: 1px solid #30363d;"><b>Fortaleza</b></td>
+                            <td style="padding: 12px; border: 1px solid #30363d;">Débil</td>
+                            <td style="padding: 12px; border: 1px solid #30363d;">Intermedia</td>
+                            <td style="padding: 12px; border: 1px solid #30363d;">Fuerte</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #30363d;">
+                            <td style="padding: 12px; border: 1px solid #30363d;"><b>Longitud de Enlace</b></td>
+                            <td style="padding: 12px; border: 1px solid #30363d;">Mayor</td>
+                            <td style="padding: 12px; border: 1px solid #30363d;">Intermedia</td>
+                            <td style="padding: 12px; border: 1px solid #30363d;">Menor</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #30363d;">
+                            <td style="padding: 12px; border: 1px solid #30363d;"><b>Energía de Disociación</b></td>
+                            <td style="padding: 12px; border: 1px solid #30363d;">Baja</td>
+                            <td style="padding: 12px; border: 1px solid #30363d;">Media</td>
+                            <td style="padding: 12px; border: 1px solid #30363d;">Alta</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #30363d;"><b>Rotación</b></td>
+                            <td style="padding: 12px; border: 1px solid #30363d;">Libre</td>
+                            <td style="padding: 12px; border: 1px solid #30363d;">Restringida</td>
+                            <td style="padding: 12px; border: 1px solid #30363d;">Bloqueada</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section">
+                <h2>⚙️ Mecanismo de Formación de Orbitales</h2>
+                <p><b>Enlace Sigma (σ):</b> Se forma por el solapamiento directo de orbitales atómicos (frontal). Existe
+                    un máximo de densidad electrónica entre los dos núcleos. Solo un enlace sigma puede existir entre
+                    dos átomos.</p>
+                <p><b>Enlace Pi (π):</b> Se forma por el solapamiento lateral de orbitales p (uno por encima y otro por
+                    debajo del eje internuclear). La densidad electrónica se encuentra en dos regiones separadas. Los
+                    enlaces π siempre están ASOCIADOS a un enlace σ.</p>
+                <ul class="feature-list" style="margin-top: 15px;">
+                    <li><b>En enlaces dobles:</b> 1 σ + 1 π</li>
+                    <li><b>En enlaces triples:</b> 1 σ + 2 π</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="laboratorio" class="tab-content">
+            <div class="section">
+                <h2 id="lab-title">Simulador de Orden de Enlace</h2>
+                <p id="lab-desc" style="margin-bottom: 20px; font-size: 1.1rem; color: #58a6ff;"></p>
+                <div class="lab-area">
+                    <div class="drop-zone" id="lab-drop">COLOCA LOS ELECTRONES AQUÍ</div>
+                    <div class="pool" id="lab-pool"></div>
+                    <button class="main-btn" onclick="checkLab()">Verificar Configuración</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="simulacro1" class="tab-content">
+            <div class="section">
+                <h2>📝 Simulacro Saber 11</h2>
+                <p style="margin-bottom: 30px; opacity: 0.8;">Estas preguntas han sido diseñadas por Carlos Duburque,
+                    siguiendo el modelo de competencias del ICFES (Uso del conocimiento, Explicación de fenómenos e
+                    Indagación).</p>
+                <div id="quiz-area-1"></div>
+                <button id="btn-submit-1" class="main-btn" onclick="gradeQuiz1()">Finalizar Examen y Ver
+                    Justificaciones</button>
+                <div id="final-results"></div>
+            </div>
+        </div>
+</div>
+<div id="simulacro2" class="tab-content">
+    <div class="section">
+        <h2>Prueba ICFES </h2>
+        <p style="margin-bottom: 30px; opacity: 0.8;">Estas preguntas han sidos sacadas del ICFES saber 11</p>
+        <div id="quiz-area-2"></div>
+        <button id="btn-submit-2" class="main-btn" onclick="gradeQuiz2()">Calificar</button>
+    </div>
+</div>
+    <script src="javascript1.js"></script>
+    <script src="javascript2.js"></script>
+</body>
+
+</html>
