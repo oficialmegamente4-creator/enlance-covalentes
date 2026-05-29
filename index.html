@@ -12,19 +12,20 @@
 <body>
 
     <header>
-        <img src="imagenes/logocasd.jpg" alt="Logo CASD" class="logo-img">
+        <img src="imagenes/_logocasd.png" alt="Logo CASD" class="logo-img">
         <div class="header-info">
             <h1>Química Mauricio</h1>
             <p>Estudiante: Carlos Hernando Duburque Cardona - 10B</p>
         </div>
-        <img src="imagenes/logo de carlitos.png" alt="Logo Carlitos" class="logo-img">
+        <img src="imagenes/logo_carlitos.png" alt="Logo Carlitos" class="logo-img">
     </header>
 
     <div class="container">
         <div class="tabs">
-            <button class="tab-btn active" onclick="openTab('repaso')">Enlaces Simples, Dobles y Triples</button>
-            <button class="tab-btn" onclick="openTab('laboratorio')">Actividad (Aprendizaje)</button>
-            <button class="tab-btn" onclick="openTab('simulacro')">Simulacro ICFES(10 Preguntas)</button>
+            <button class="tab-btn active" onclick="openTab('repaso',)">Enlaces Simples, Dobles y Triples</button>
+            <button class="tab-btn" onclick="openTab('laboratorio',)">Actividad (Aprendizaje)</button>
+            <button class="tab-btn" onclick="openTab('simulacro1', )">Simulacro Pruebas(10 Preguntas)</button>
+            <button class="tab-btn" onclick="openTab('simulacro2',); loadQuiz2();">Prueba ICFES(10 Preguntas)</button>
         </div>
 
         <div id="repaso" class="tab-content active">
@@ -73,7 +74,7 @@
                             <p><b>Comparación Visual</b></p>
                             <div
                                 style="background: #eee; height: 200px; display: flex; align-items: center; justify-content: center; margin: 10px 0; border-radius: 8px;">
-                                <img src="imagenes/tipos-de-enlaces-covalentes-lifeder-min.jpg"
+                                <img src="imagenes/tipos-de-enlaces-covalentes-lifeder-min.png"
                                     alt="Comparación de enlaces"
                                     style="max-width: 100%; max-height: 100%; object-fit: contain;">
                             </div>
@@ -156,20 +157,29 @@
             </div>
         </div>
 
-        <div id="simulacro" class="tab-content">
+        <div id="simulacro1" class="tab-content">
             <div class="section">
-                <h2>📝 Simulacro Oficial Saber 11</h2>
+                <h2>📝 Simulacro Saber 11</h2>
                 <p style="margin-bottom: 30px; opacity: 0.8;">Estas preguntas han sido diseñadas por Carlos Duburque,
                     siguiendo el modelo de competencias del ICFES (Uso del conocimiento, Explicación de fenómenos e
                     Indagación).</p>
-                <div id="quiz-area"></div>
-                <button id="btn-submit" class="main-btn" onclick="gradeQuiz()">Finalizar Examen y Ver
+                <div id="quiz-area-1"></div>
+                <button id="btn-submit-1" class="main-btn" onclick="gradeQuiz1()">Finalizar Examen y Ver
                     Justificaciones</button>
                 <div id="final-results"></div>
             </div>
         </div>
+</div>
+<div id="simulacro2" class="tab-content">
+    <div class="section">
+        <h2>Prueba ICFES </h2>
+        <p style="margin-bottom: 30px; opacity: 0.8;">Estas preguntas han sidos sacadas del ICFES saber 11</p>
+        <div id="quiz-area-2"></div>
+        <button id="btn-submit-2" class="main-btn" onclick="gradeQuiz2()">Calificar</button>
     </div>
-    <script src="javascript.js"></script>
+</div>
+    <script src="javascript1.js"></script>
+    <script src="javascript2.js"></script>
 </body>
 
 </html>
